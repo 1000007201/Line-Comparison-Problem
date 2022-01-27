@@ -25,10 +25,15 @@ namespace LineComparisonProblem
             {
                 Console.WriteLine("Both line are equal in length");
             }
-            else
+            if (line1Length > line2Length)
             {
-                Console.WriteLine("Lines are not equal");
+                Console.WriteLine("Line 1 is longer than Line 2");
             }
+            if (line2Length > line1Length)
+            {
+                Console.WriteLine("Line 2 is longer than Line 1");
+            }
+
         }
     }
     
