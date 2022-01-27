@@ -20,18 +20,14 @@ namespace LineComparisonProblem
         }
         public void CompareLine()
         {
-            if (line1Length > line2Length)
-            {
-                Console.WriteLine("Line 1 is longer than line 2");
 
-            }
-            if (line1Length < line2Length)
-            {
-                Console.WriteLine("Line 2 is longer than Line 1");
-            }
             if (line1Length == line2Length)
             {
                 Console.WriteLine("Both line are equal in length");
+            }
+            else
+            {
+                Console.WriteLine("Lines are not equal");
             }
         }
     }
