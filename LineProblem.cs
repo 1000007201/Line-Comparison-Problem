@@ -8,28 +8,28 @@ namespace LineComparisonProblem
 {
     public class LineProblem
     {
-        private double line1Length, line2Length;
-        public void GetLine1Length(int x1,int y1,int x2,int y2)
+        private double length;
+        public double GetLineLength(int x1,int y1,int x2,int y2)
         {
-            line1Length = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y2),2));
+            length = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y2),2));
+            return length;
         }
 
-        public void GetLine2Length(int x1, int y1, int x2, int y2)
-        {
-            line2Length = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y2), 2));
-        }
-        public void CompareLine()
+        public void CompareLine(double line1Length,double line2Length)
         {
 
-            if (line1Length == line2Length)
+            if (line1Length.Equals(line2Length))
             {
                 Console.WriteLine("Both line are equal in length");
             }
-            if (line1Length > line2Length)
+            //a>b
+            //line1Length>line2Length
+            if (line1Length.CompareTo(line2Length)>0)
             {
                 Console.WriteLine("Line 1 is longer than Line 2");
             }
-            if (line2Length > line1Length)
+            //line1Length<line2Length
+            if (line1Length.CompareTo(line2Length)<0)
             {
                 Console.WriteLine("Line 2 is longer than Line 1");
             }
