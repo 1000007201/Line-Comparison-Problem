@@ -8,17 +8,14 @@ namespace LineComparisonProblem
 {
     public class LineProblem
     {
-        private double line1Length, line2Length;
-        public void GetLine1Length(int x1,int y1,int x2,int y2)
+        private double length;
+        public double GetLineLength(int x1,int y1,int x2,int y2)
         {
-            line1Length = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y2),2));
+            length = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y2),2));
+            return length;
         }
 
-        public void GetLine2Length(int x1, int y1, int x2, int y2)
-        {
-            line2Length = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y2), 2));
-        }
-        public void CompareLine()
+        public void CompareLine(double line1Length,double line2Length)
         {
 
             if (line1Length == line2Length)
